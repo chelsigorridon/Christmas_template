@@ -81,3 +81,37 @@ body{background-color:#f5f0e6;background-image:url("data:image/svg+xml,%3Csvg vi
 .envelope-gate.is-opening .gate-ornaments{opacity:0;transition:opacity .28s}
 @media(max-width:800px){.gate-ornaments-bottom{right:2%;bottom:0;width:160px;height:220px}}
 @media(max-width:560px){.gate-ornaments-bottom{right:-17px;bottom:3%;width:112px;height:155px;opacity:.72}}
+
+/* Readable type for the practical details and RSVP form */
+.details-heading h2{font-size:clamp(40px,5.3vw,54px)}
+.details-intro{font-size:20px}
+.detail-label{font-size:10px;letter-spacing:.14em}
+.detail-item h3{font-size:19px}
+.detail-foot,.detail-address,.map-link{font-size:12px}
+.details-bottom{font-size:9px}
+.rsvp-intro h2{font-size:clamp(46px,5.2vw,54px)}
+.rsvp-intro>p:not(.eyebrow){font-size:16px;line-height:1.8}
+.rsvp-note{font-size:19px}
+.field>span{font-size:12px}
+.field>span i{font-size:10px}
+.field input,.field select,.field textarea{font-size:14px}
+.send-rsvp{font-size:12px}
+.form-feedback{font-size:13px}
+.privacy-note{font-size:11px}
+.message-ornament{display:none}
+@media(max-width:560px){
+  .details-heading h2{font-size:40px}
+  .details-intro{font-size:18px}
+  .detail-label{font-size:9px}
+  .detail-item h3{font-size:17px}
+  .detail-foot,.detail-address,.map-link{font-size:11px}
+  .details-bottom{font-size:8px}
+  .rsvp-intro h2{font-size:42px}
+  .rsvp-intro>p:not(.eyebrow){font-size:15px;line-height:1.8}
+  .rsvp-note{font-size:17px}
+  .field>span{font-size:12px}
+  .field input,.field select,.field textarea{font-size:16px}
+  .send-rsvp{font-size:12px}
+  .form-feedback{font-size:13px}
+  .privacy-note{font-size:11px}
+}

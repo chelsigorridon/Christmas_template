@@ -39,7 +39,7 @@ function PortraitFrame({ src, alt, className }: { src: string; alt: string; clas
 }
 
 function Stars() {
-  return <div className="star-dust" aria-hidden="true"><span>✳</span><span>✧</span><span>✦</span><span>✧</span><span>✳</span></div>
+  return <div className="star-dust" aria-hidden="true"><span>✧</span><span>✦</span><span>✧</span></div>
 }
 
 function FloatingStars() {
@@ -159,10 +159,10 @@ export default function App() {
   return <>
     <FloatingStars />
     {!entered && <section className={`envelope-gate ${opened ? 'is-opening' : ''}`} aria-label="Open your Christmas invitation">
-      <div className="gate-glow"/><Ornaments className="gate-ornaments"/><Ornaments className="gate-ornaments gate-ornaments-bottom"/><HollyBranch className="gate-sprig gate-sprig-left"/><HollyBranch className="gate-sprig gate-sprig-right"/><span className="gate-star">✳</span>
+      <div className="gate-glow"/><Ornaments className="gate-ornaments"/><Ornaments className="gate-ornaments gate-ornaments-bottom"/><HollyBranch className="gate-sprig gate-sprig-left"/><HollyBranch className="gate-sprig gate-sprig-right"/>
       <div className="gate-copy"><span className="gate-kicker">A LITTLE CHRISTMAS POST</span><h1>You’re<br/><em>invited.</em></h1><p>A little something lovely is waiting inside.</p></div>
       <button className="envelope-trigger" onClick={openInvitation} disabled={opened} aria-label={opened ? 'Opening your Christmas invitation' : 'Open your Christmas invitation'}>
-        <div className={`envelope ${opened ? 'envelope-open' : ''}`}><div className="envelope-letter"><span className="letter-mini">WITH LOVE FROM</span><span className="letter-name">{invitation.host}</span><span className="letter-holly">✳</span></div><div className="envelope-back"/><div className="envelope-pocket"/><div className="envelope-flap"><div className="flap-inner"/></div><div className="wax-seal" aria-hidden="true"><span>✦</span></div><span className="envelope-address">{invitation.host}</span></div>
+        <div className={`envelope ${opened ? 'envelope-open' : ''}`}><div className="envelope-letter"><span className="letter-mini">WITH LOVE FROM</span><span className="letter-name">{invitation.host}</span></div><div className="envelope-back"/><div className="envelope-pocket"/><div className="envelope-flap"><div className="flap-inner"/></div><div className="wax-seal" aria-hidden="true"><span>✦</span></div><span className="envelope-address">{invitation.host}</span></div>
       </button><p className="envelope-hint">{opened ? 'Your invitation is opening…' : 'Tap the envelope to open'}</p>
       <span className="gate-footer">A CHRISTMAS GATHERING · {invitation.date.toUpperCase()}</span>
     </section>}
@@ -171,26 +171,26 @@ export default function App() {
       <div className="scroll-progress" aria-hidden="true"/>
       <audio ref={musicRef} src="/audio/soft-christmas.wav" loop preload="none" aria-label="Soft instrumental Christmas music"/>
       <button className="music-toggle" type="button" onClick={toggleMusic} aria-pressed={musicPlaying} aria-label={musicPlaying ? 'Turn background music off' : 'Turn background music on'}><span aria-hidden="true">♫</span>{musicPlaying ? 'Music on' : 'Music off'}</button>
-      <header className="page-nav"><a className="nav-monogram" href="#top" aria-label="Back to the invitation">W<span>✳</span></a><span className="nav-season">A CHRISTMAS GATHERING · 2026</span><a className="nav-rsvp" href="#rsvp">RSVP <span>↓</span></a></header>
+      <header className="page-nav"><a className="nav-monogram" href="#top" aria-label="Back to the invitation">W</a><span className="nav-season">A CHRISTMAS GATHERING · 2026</span><a className="nav-rsvp" href="#rsvp">RSVP <span>↓</span></a></header>
       <main id="top">
         <section className="invitation-hero" data-reveal>
           <PortraitFrame className="portrait-frame-left" src="https://images.unsplash.com/photo-1724124620385-4a3dfa322c8f?auto=format&fit=crop&w=900&q=82" alt="A couple enjoying a relaxed Christmas portrait"/><PortraitFrame className="portrait-frame-right" src="https://images.unsplash.com/photo-1724124620406-540107f179fb?auto=format&fit=crop&w=900&q=82" alt="The same couple sharing a warm holiday embrace"/>
           <div className="invitation-paper"><div className="paper-border"><span className="paper-corner corner-tl">✧</span><span className="paper-corner corner-tr">✧</span><span className="paper-corner corner-bl">✧</span><span className="paper-corner corner-br">✧</span>
-            <p className="paper-overline">WITH THE WARMEST WELCOME</p><span className="paper-flourish">✳</span><p className="paper-invite">You’re invited to</p><h2>Christmas</h2><p className="paper-event">{invitation.eventTitle}</p><span className="paper-rule"><i>✦</i></span><p className="paper-host">Hosted with love by<br/><strong>{invitation.host}</strong></p><p className="paper-message">{invitation.invitationMessage}</p><a className="paper-rsvp" href="#rsvp">WE HOPE YOU’LL JOIN US <span>↓</span></a>
+            <p className="paper-overline">WITH THE WARMEST WELCOME</p><p className="paper-invite">You’re invited to</p><h2>Christmas</h2><p className="paper-event">{invitation.eventTitle}</p><span className="paper-rule"><i>✦</i></span><p className="paper-host">Hosted with love by<br/><strong>{invitation.host}</strong></p><p className="paper-message">{invitation.invitationMessage}</p><a className="paper-rsvp" href="#rsvp">WE HOPE YOU’LL JOIN US <span>↓</span></a>
           </div></div>
           <span className="hero-caption">A day for good food, familiar faces & being together.</span><span className="hero-side-note">A NOTE FROM OUR HOME TO YOURS</span>
         </section>
 
         <section className="details-section" id="details" data-reveal><div className="section-label"><span>01</span><i/></div><div className="details-heading"><p className="eyebrow">PLEASE SAVE THE DATE</p><h2>The lovely<br/><em>little details.</em></h2><p className="details-intro">We’ve saved you a place at the table.</p><p className="countdown-line"><span aria-hidden="true">✦</span> {countdown}</p></div><div className="detail-grid">
-          <article className="detail-item"><span className="detail-icon">✳</span><p className="detail-label">THE DAY</p><h3>{invitation.date}</h3><span className="detail-foot">A day to gather</span></article>
+          <article className="detail-item"><p className="detail-label">THE DAY</p><h3>{invitation.date}</h3><span className="detail-foot">A day to gather</span></article>
           <article className="detail-item"><span className="detail-icon">◷</span><p className="detail-label">THE TIME</p><h3>{invitation.time}</h3><span className="detail-foot">Come as you are</span></article>
           <article className="detail-item detail-location"><span className="detail-icon">⌖</span><p className="detail-label">THE PLACE</p><h3>{invitation.venue}</h3><p className="detail-address">{invitation.address}</p><a className="map-link" href={mapsHref} target="_blank" rel="noreferrer">Get directions <span>↗</span></a></article>
           {invitation.dressCode && <article className="detail-item"><span className="detail-icon">✧</span><p className="detail-label">DRESS CODE</p><h3>{invitation.dressCode}</h3><span className="detail-foot">The festive sort</span></article>}
         </div><div className="details-bottom"><span>WE CAN’T WAIT TO SEE YOU</span><span>✦</span><span>WITH LOVE, {invitation.host.toUpperCase()}</span></div></section>
 
-        <section className="host-message" data-reveal><div className="message-ornament"><span>✳</span><i/></div><p className="eyebrow">A LITTLE NOTE FROM YOUR HOST</p><h2>Christmas is for<br/><em>being together.</em></h2><p className="host-copy">{invitation.hostMessage}</p><span className="host-signature">With love, {invitation.host}</span><HollyBranch className="message-sprig"/></section>
+        <section className="host-message" data-reveal><div className="message-ornament"><i/></div><p className="eyebrow">A LITTLE NOTE FROM YOUR HOST</p><h2>Christmas is for<br/><em>being together.</em></h2><p className="host-copy">{invitation.hostMessage}</p><span className="host-signature">With love, {invitation.host}</span><HollyBranch className="message-sprig"/></section>
 
-        <section className="rsvp-section" id="rsvp" data-reveal><div className="rsvp-intro"><p className="eyebrow">KINDLY REPLY</p><h2>Will you be<br/><em>joining us?</em></h2><p>Please let us know if you can make it. We’d love to celebrate with you.</p><span className="rsvp-note"><span>✳</span> A little note helps us set the table.</span></div><form className="rsvp-form" onSubmit={sendRsvp}>
+        <section className="rsvp-section" id="rsvp" data-reveal><div className="rsvp-intro"><p className="eyebrow">KINDLY REPLY</p><h2>Will you be<br/><em>joining us?</em></h2><p>Please let us know if you can make it. We’d love to celebrate with you.</p><span className="rsvp-note">A little note helps us set the table.</span></div><form className="rsvp-form" onSubmit={sendRsvp}>
           <label className="field"><span>Your name</span><input name="guestName" type="text" autoComplete="name" placeholder="How shall we put your place card?" required/></label>
           <label className="field"><span>Will you be there?</span><select name="attendance" required defaultValue=""><option value="" disabled>Please choose one</option><option value="yes">Yes, I’ll be there</option><option value="no">Sorry, I can’t make it</option></select></label>
           <label className="field"><span>How many in your party?</span><select name="guestCount" defaultValue="1"><option value="1">Just me</option><option value="2">Two guests</option><option value="3">Three guests</option><option value="4">Four guests</option><option value="5">Five guests</option><option value="6">Six guests</option></select></label>
@@ -201,7 +201,7 @@ export default function App() {
           <p className="privacy-note">Your reply opens in WhatsApp and is sent only when you tap Send there. Calendar invite includes the address and a two-hour time block.</p>
         </form></section>
 
-        <section className="closing" data-reveal><HollyBranch className="closing-sprig closing-left"/><Ornaments className="closing-sprig closing-right"/><Stars/><span className="closing-kicker">UNTIL THEN, DEAR FRIENDS</span><h2>Looking forward to<br/><em>celebrating with you.</em></h2><p>{invitation.closingMessage}</p><span className="closing-heart">With love, {invitation.host} <i>✳</i></span></section>
+        <section className="closing" data-reveal><HollyBranch className="closing-sprig closing-left"/><Ornaments className="closing-sprig closing-right"/><Stars/><span className="closing-kicker">UNTIL THEN, DEAR FRIENDS</span><h2>Looking forward to<br/><em>celebrating with you.</em></h2><p>{invitation.closingMessage}</p><span className="closing-heart">With love, {invitation.host}</span></section>
       </main>
       <footer className="page-footer"><span>A CHRISTMAS INVITATION, MADE WITH LOVE</span><a href="#top">Back to the top ↑</a><span>25 · 12 · 2026</span></footer>
     </div>
